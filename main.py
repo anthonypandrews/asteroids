@@ -10,7 +10,7 @@ def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     clock = pygame.time.Clock()
     running = True
-    dt = 0
+    dt = 0 # dt is delta time in seconds since last frame
     
     # Player setup
     player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
@@ -34,6 +34,7 @@ def main():
         
         # draw the player
         player.draw(screen)
+        player.update(dt)
 
         # flip() the display to put your work on screen
         pygame.display.flip()
