@@ -12,7 +12,12 @@ def main():
     running = True
     dt = 0 # dt is delta time in seconds since last frame
     
+    # Group setup
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+    
     # Player setup
+    Player.containers = (updatable, drawable)
     player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
 
     # Welcome message
@@ -32,9 +37,10 @@ def main():
         # fill the screen with a color to wipe away anything from last frame
         screen.fill("black")
         
-        # draw the player
-        player.draw(screen)
-        player.update(dt)
+        # draw the player group
+        for p in drawable:
+            p.draw(screen)
+        updatable.update(dt)
 
         # flip() the display to put your work on screen
         pygame.display.flip()
