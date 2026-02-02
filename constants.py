@@ -8,6 +8,7 @@ LINE_WIDTH = 2 # width of the lines that draw the player's ship
 PLAYER_TURN_SPEED = 300
 PLAYER_SPEED = 200
 PLAYER_SHOOT_SPEED = 500
+PLAYER_SHOOT_COOLDOWN_SECONDS = 0.3
 
 # Asteroid constants
 ASTEROID_MIN_RADIUS = 20

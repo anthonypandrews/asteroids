@@ -56,10 +56,19 @@ def main():
             p.draw(screen)
         updatable.update(dt)
 
+        # check if collision b/n player and asteroid
         for roid in asteroids:
             if roid.collides_with(player):
                 log_event("player_hit")
                 sys.exit("Game over!")
+        
+        # check if collision b/n bullet and asteroid
+        for roid in asteroids:
+            for shot in shots:
+                if shot.collides_with(roid):
+                    log_event("asteroid_shot")
+                    shot.kill()
+                    roid.kill()
 
         # flip() the display to put your work on screen
         pygame.display.flip()
