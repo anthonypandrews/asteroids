@@ -7,9 +7,13 @@ PLAYER_RADIUS = 20 # radius of the player's ship
 LINE_WIDTH = 2 # width of the lines that draw the player's ship
 PLAYER_TURN_SPEED = 300
 PLAYER_SPEED = 200
+PLAYER_SHOOT_SPEED = 500
 
 # Asteroid constants
 ASTEROID_MIN_RADIUS = 20
 ASTEROID_KINDS = 3
 ASTEROID_SPAWN_RATE_SECONDS = 0.8
 ASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS
+
+# Bullet constants
+SHOT_RADIUS = 5

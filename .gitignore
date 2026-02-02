@@ -12,3 +12,6 @@ wheels/
 # Logging files
 game_state.jsonl
 game_events.jsonl
+
+# Test files
+test.py
