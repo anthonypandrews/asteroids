@@ -68,7 +68,7 @@ def main():
                 if shot.collides_with(roid):
                     log_event("asteroid_shot")
                     shot.kill()
-                    roid.kill()
+                    roid.split()
 
         # flip() the display to put your work on screen
         pygame.display.flip()
